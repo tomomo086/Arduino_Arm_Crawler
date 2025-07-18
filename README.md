@@ -125,7 +125,7 @@ arduino-arm-crawler/
 
 ### 実機の様子
 
-[動作確認:Xの投稿へ](https://x.com/mirai_sousiyo39/status/1908703303556620438?t=WdWrfRG8r5J6I_y7z20qDg&s=19)
+[動作確認:Xの投稿へ](https://x.com/mirai_sousiyo39/status/1909121900678426879?t=9XamzxhPQmJzlQOsojcGTQ&s=19)
 
 [実際に動かしてる様子:Xの投稿へ](https://x.com/i/status/1909567755181080726)
 
