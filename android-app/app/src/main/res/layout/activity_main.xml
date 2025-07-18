@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <!-- タイトル -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arm Crawler Control"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp" />
+
+    <!-- 前進ボタン -->
+    <Button
+        android:id="@+id/btnForward"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="前進"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- 左右ボタンのレイアウト -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+        
+        <Button
+            android:id="@+id/btnLeft"
+            android:layout_width="95dp"
+            android:layout_height="60dp"
+            android:text="左旋回"
+            android:textSize="16sp"
+            android:layout_marginEnd="10dp" />
+
+        <Button
+            android:id="@+id/btnRight"
+            android:layout_width="95dp"
+            android:layout_height="60dp"
+            android:text="右旋回"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- 後退ボタン -->
+    <Button
+        android:id="@+id/btnBackward"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="後退"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- 停止ボタン -->
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="停止"
+        android:textSize="18sp"
+        android:backgroundTint="#FF5722"
+        android:layout_marginBottom="32dp" />
+
+    <!-- 速度調整 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="速度調整"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp" />
+
+    <SeekBar
+        android:id="@+id/speedSlider"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:max="9"
+        android:progress="5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0（最低） ← → 9（最高）"
+        android:textSize="12sp"
+        android:layout_marginTop="4dp" />
+
+</LinearLayout>

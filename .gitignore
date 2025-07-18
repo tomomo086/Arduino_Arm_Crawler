@@ -1,0 +1,55 @@
+# Arduino IDE
+*.hex
+*.elf
+*.bin
+
+# Android Studio
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Android APK
+*.apk
+*.aab
+
+# Log files
+*.log
+
+# Virtual machine files
+*.tmp
+*.temp
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Backup files
+*~
+*.backup
+*.bak
+
+# Build artifacts
+build/
+dist/
+out/
