@@ -1,10 +1,13 @@
 # Arduino Arm Crawler Remote Control
+## 🎓 ポートフォリオ作品
 
-![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Platform: Arduino | Android](https://img.shields.io/badge/Platform-Arduino%20%7C%20Android-green.svg)
 ![Language: C++ | Kotlin](https://img.shields.io/badge/Language-C%2B%2B%20%7C%20Kotlin-orange.svg)
+![Status: Portfolio](https://img.shields.io/badge/Status-Portfolio-purple.svg)
 
 タミヤのアームクローラーをArduino Uno R4 WiFiとAndroidアプリでBluetooth Low Energy (BLE)制御するIoTプロジェクト
+
+> ⚠️ **注意**: これはポートフォリオ・学習目的の作品です。配布や商用利用は想定しておりません。
 
 ## 🎯 プロジェクト概要
 
@@ -79,35 +82,34 @@ arduino-arm-crawler/
 └── README.md
 ```
 
-## 🚀 クイックスタート
+## 🔍 技術検証・学習内容
 
-### 必要なもの
-- Arduino Uno R4 WiFi
-- L298N Motor Driver
-- Tamiya Arm Crawler Kit
-- Android デバイス (8.0+)
+### 使用技術・コンポーネント
+- Arduino Uno R4 WiFi (BLE通信・制御基板)
+- L298N Motor Driver (モーター駆動回路)
+- Tamiya Arm Crawler Kit (ベース車体)
+- Android デバイス (制御アプリ)
 
-### セットアップ
-1. **ハードウェア接続**
-   ```
-   Arduino → L298N
-   IN1: Pin 2, IN2: Pin 3, ENA: Pin 5
-   IN3: Pin 4, IN4: Pin 6, ENB: Pin 7
-   ```
+### 実装・検証した技術要素
+1. **ハードウェア統合**
+   - Arduino-モータードライバー間の配線設計
+   - PWM信号によるモーター制御
+   - 電源管理・安全性確保
 
-2. **ファームウェア書き込み**
-   ```bash
-   # Arduino IDE で firmware/arm_crawler_controller.ino を開いて書き込み
-   ```
+2. **組み込みプログラミング**
+   - ArduinoBLEライブラリを用いたBLE通信実装
+   - リアルタイムコマンド処理
+   - エラーハンドリング・安全停止機能
 
-3. **Androidアプリ**
-   ```bash
-   # Android Studio で android-app フォルダを開いてビルド・インストール
-   ```
+3. **モバイルアプリ開発**
+   - Kotlin + Bluetooth LE APIによるAndroidアプリ
+   - UI/UXデザイン（方向制御・速度調整）
+   - BLE接続管理・通信プロトコル実装
 
-4. **操作開始**
-   - アプリ起動 → 自動でBLE接続
-   - ボタンで方向制御、スライダーで速度調整
+4. **システム統合**
+   - Arduino-Android間のリアルタイム通信（遅延<50ms）
+   - 10段階速度制御システム
+   - 動作範囲・パフォーマンス測定
 
 ## 🎯 学習成果
 
@@ -149,9 +151,12 @@ arduino-arm-crawler/
 
 > 💡 **詳細なレジュメ**: [HTML版レジュメ](docs/resume.html) でより詳細な情報をご覧いただけます。
 
-## 📄 ライセンス
+## 📄 ライセンス・利用について
 
-MIT License
+**ポートフォリオ・学習目的の作品**
+
+このプロジェクトは技術学習・ポートフォリオ展示のために制作されたものです。  
+ソースコード閲覧・技術参考は自由ですが、配布や商用利用は想定しておりません。
 
 ## 🔧 開発環境・ツール
 
