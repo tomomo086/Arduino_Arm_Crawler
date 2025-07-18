@@ -121,7 +121,7 @@ arduino-arm-crawler/
 ## 📸 プロジェクトレジュメ
 
 ### 完成したシステム
-![完成したシステム](https://pbs.twimg.com/media/example1.jpg)
+![完成したシステム](https://x.com/mirai_sousiyo39/status/1908703303556620438)
 
 ### ハードウェア構成
 ![ハードウェア構成](https://pbs.twimg.com/media/example2.jpg)
