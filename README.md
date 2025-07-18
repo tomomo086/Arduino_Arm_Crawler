@@ -138,7 +138,9 @@ arduino-arm-crawler/
 [![基本動作デモ](https://img.youtube.com/vi/example1/maxresdefault.jpg)](https://youtube.com/watch?v=example1)
 
 #### 速度制御デモ
-[![速度制御デモ](https://pbs.twimg.com/media/example5.jpg)](https://x.com/your_username/status/1234567894)
+[![速度制御デモ - X投稿](https://pbs.twimg.com/media/example5.jpg)](https://x.com/i/status/1909567755181080726)
+
+> 📱 **X投稿**: [Arduino Arm Crawler 速度制御デモ](https://x.com/i/status/1909567755181080726)
 
 #### アプリ操作デモ
 [![アプリ操作デモ](https://img.youtube.com/vi/example2/maxresdefault.jpg)](https://youtube.com/watch?v=example2)
