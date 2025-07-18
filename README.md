@@ -124,6 +124,9 @@ arduino-arm-crawler/
 ![完成品サムネ](images/20250718_145158.jpg)
 
 ### 実機の様子
+
+[動作確認:Xの投稿へ](https://x.com/mirai_sousiyo39/status/1908703303556620438?t=WdWrfRG8r5J6I_y7z20qDg&s=19)
+
 [実際に動かしてる様子:Xの投稿へ](https://x.com/i/status/1909567755181080726)
 
 ### パフォーマンス
