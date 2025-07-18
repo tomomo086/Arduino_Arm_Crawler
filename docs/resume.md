@@ -4,11 +4,11 @@
 
 **プロジェクト名**: Arduino Arm Crawler Remote Control  
 **開発期間**: 2024年  
-**開発者**: tmomo086 (X: くろT@mirai_sousiyo39) + AI駆動開発 (Grok3 + Claude4)  
+**開発者**: tmomo086 (X: くろT@mirai_sousiyo39) + AI駆動開発 (Cursor + Claude 4.0)  
 **プロジェクト種別**: IoTロボット制御システム / モバイルアプリ開発
 
 ### プロジェクト説明
-タミヤのアームクローラー工作キットをベースに、Arduino Uno R4 WiFiとAndroidアプリを使用してBLE（Bluetooth Low Energy）でワイヤレス制御するIoTシステムを開発。AI駆動開発手法を用いた初作品として、入門的なロボット制御システムを構築。
+タミヤのアームクローラー工作キットをベースに、Arduino Uno R4 WiFiとAndroidアプリを使用してBLE（Bluetooth Low Energy）でワイヤレス制御するIoTシステムを開発。**CursorとClaude 4.0を活用したAI駆動開発手法**を用いた初作品として、入門的なロボット制御システムを構築。
 
 ## 🎯 技術的成果
 
@@ -39,8 +39,10 @@
 ### ソフトウェア・開発環境
 - **ファームウェア**: C++ + ArduinoBLE ライブラリ
 - **モバイルアプリ**: Kotlin + Bluetooth LE API
-- **開発環境**: Arduino IDE, Android Studio
+- **AI統合開発環境**: [Cursor](https://cursor.sh/) + Claude Sonnet 4.0
+- **従来型IDE**: Arduino IDE, Android Studio
 - **バージョン管理**: Git
+- **AI支援機能**: コード生成・デバッグ・リファクタリング
 
 ### 通信プロトコル設計
 - **通信方式**: BLE (Bluetooth Low Energy)
@@ -149,9 +151,10 @@ arduino-arm-crawler/
 - **無線通信**: IoTデバイス間通信の実践的理解
 
 ### 学習価値
-- **AI駆動開発**: 最新の開発手法の実践
+- **AI駆動開発**: CursorとClaude 4.0による効率的な開発プロセスの実践
 - **プロトタイピング**: アイデアから実機までの完結した開発体験
 - **問題解決**: 技術的課題の特定と解決プロセス
+- **AI支援プログラミング**: プロンプトエンジニアリングとコード品質管理
 
 ### 今後の展開可能性
 - **機能拡張**: カメラ追加、センサー連携
@@ -168,6 +171,6 @@ arduino-arm-crawler/
 
 **開発者情報**  
 tmomo086 (X: @mirai_sousiyo39)  
-AI駆動開発: Grok3 + Claude4
+AI駆動開発: Cursor + Claude 4.0
 
-*本プロジェクトは教育・学習目的で開発されたオープンソースプロジェクトです。*
+*本プロジェクトは、Cursor IDE を活用したAI駆動開発の実践として、教育・学習目的で開発されたオープンソースプロジェクトです。*

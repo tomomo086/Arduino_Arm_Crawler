@@ -9,7 +9,8 @@
 ## 🎯 プロジェクト概要
 
 タミヤのアームクローラー工作キットをワイヤレス化し、AndroidアプリからBLE通信でリアルタイム制御するシステムです。
-ロボットをAI駆動開発した初作品で、入門として作成しました、
+
+**CursorとClaude 4.0を活用したAI駆動開発**による初作品として、IoT・ロボット制御の入門プロジェクトとして制作しました。
 
 ### 主な機能
 - **リアルタイム制御**: 前進・後退・左右旋回・停止
@@ -27,6 +28,11 @@
 - **Arduino**: C++ + ArduinoBLE ライブラリ
 - **Android**: Kotlin + Bluetooth LE API
 - **通信**: BLE (UUID ベースのサービス・特性)
+
+### 開発ツール
+- **AI統合開発環境**: [Cursor](https://cursor.sh/) + Claude Sonnet 4.0
+- **従来型IDE**: Arduino IDE, Android Studio
+- **AI支援**: コード生成・デバッグ・リファクタリング
 
 ## 📱 システム構成
 
@@ -106,12 +112,13 @@ arduino-arm-crawler/
 
 このプロジェクトで習得した技術：
 
-- **AI駆動ロボット開発**: AIを活用したソフトとハードの開発
+- **AI駆動開発**: Cursor + Claude 4.0による効率的なコード生成・デバッグ
 - **IoT開発**: ハードウェア制御とモバイルアプリの統合
 - **BLE通信**: Arduino-Android間のリアルタイム通信
 - **組み込み制御**: PWMによるモーター制御・エラーハンドリング
 - **モバイル開発**: Kotlin + Bluetooth LE API
 - **システム設計**: 安全性を考慮した制御システム
+- **AI支援開発**: プロンプトエンジニアリングとコード品質管理
 
 ## 🔧 技術的な特徴
 
@@ -145,6 +152,18 @@ arduino-arm-crawler/
 
 MIT License
 
-## 作成者🔧
-tmomo086(X:くろT@mirai_sousiyo39)+Grok3+Claude4
+## 🔧 開発環境・ツール
+
+このプロジェクトの開発には以下のツールを使用しました：
+
+- **AI開発環境**: [Cursor](https://cursor.sh/) - Claude Sonnet搭載のAI統合開発環境
+- **AI助手**: Claude 4.0 (Anthropic) - コード生成・デバッグ支援
+- **コード補完**: Grok 3 - 追加のコード生成支援
+- **統合開発環境**: Arduino IDE, Android Studio
+
+## 👨‍💻 作成者
+
+**tmomo086** ([@mirai_sousiyo39](https://x.com/mirai_sousiyo39))
+
+> 本プロジェクトは、AI駆動開発の実践として、Cursor + Claude 4.0を主要開発ツールとして制作されました。
 
