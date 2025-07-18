@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Arm Crawler Remote Control - プロジェクトレジュメ</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --light-bg: #ecf0f1;
+            --dark-text: #2c3e50;
+            --light-text: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .section {
+            background: white;
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--light-bg);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .section h3 {
+            color: var(--secondary-color);
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .project-info {
+            background: var(--light-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .project-info strong {
+            color: var(--primary-color);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .tech-card {
+            background: var(--light-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--success-color);
+        }
+
+        .tech-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .tech-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tech-list li {
+            padding: 5px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .tech-list li:last-child {
+            border-bottom: none;
+        }
+
+        .tech-list strong {
+            color: var(--secondary-color);
+        }
+
+        .performance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .performance-table th {
+            background: var(--primary-color);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .performance-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .performance-table tr:hover {
+            background: var(--light-bg);
+        }
+
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 5px;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .demo-section {
+            text-align: center;
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .demo-links {
+            margin: 20px 0;
+        }
+
+        .demo-links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            background: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .demo-links a:hover {
+            background: var(--primary-color);
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            background: var(--secondary-color);
+            color: white;
+            border-radius: 3px;
+            font-size: 0.9em;
+            margin: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Arduino Arm Crawler Remote Control</h1>
+            <div class="subtitle">IoTロボット制御システム - プロジェクトレジュメ</div>
+        </header>
+
+        <section class="section">
+            <h2>📋 プロジェクト概要</h2>
+            <div class="project-info">
+                <p><strong>プロジェクト名</strong>: Arduino Arm Crawler Remote Control</p>
+                <p><strong>開発期間</strong>: 2024年</p>
+                <p><strong>開発者</strong>: tmomo086 (X: くろT@mirai_sousiyo39) + AI駆動開発 (Grok3 + Claude4)</p>
+                <p><strong>プロジェクト種別</strong>: IoTロボット制御システム / モバイルアプリ開発</p>
+            </div>
+            <p>タミヤのアームクローラー工作キットをベースに、Arduino Uno R4 WiFiとAndroidアプリを使用してBLE（Bluetooth Low Energy）でワイヤレス制御するIoTシステムを開発。AI駆動開発手法を用いた初作品として、入門的なロボット制御システムを構築。</p>
+        </section>
+
+        <section class="section">
+            <h2>🎯 技術的成果</h2>
+            <h3>主要機能</h3>
+            <ul class="feature-list">
+                <li><strong>リアルタイム制御</strong>: 前進・後退・左右旋回・停止の即座な応答</li>
+                <li><strong>10段階速度調整</strong>: PWM制御による精密なスピードコントロール</li>
+                <li><strong>BLE通信</strong>: 低遅延（約50ms）での安定通信</li>
+                <li><strong>直感的UI</strong>: タッチベースの操作インターフェース</li>
+            </ul>
+
+            <h3>パフォーマンス指標</h3>
+            <table class="performance-table">
+                <thead>
+                    <tr>
+                        <th>項目</th>
+                        <th>仕様/性能</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>通信遅延</td><td>&lt; 50ms</td></tr>
+                    <tr><td>動作範囲</td><td>約10m（屋内環境）</td></tr>
+                    <tr><td>速度範囲</td><td>0.1m/s - 0.8m/s</td></tr>
+                    <tr><td>Arduino稼働時間</td><td>約8時間</td></tr>
+                    <tr><td>モーター稼働時間</td><td>約1時間（乾電池5本）</td></tr>
+                    <tr><td>対応Android</td><td>8.0+</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <h2>🛠️ 使用技術・ツール</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h4>ハードウェア</h4>
+                    <ul class="tech-list">
+                        <li><strong>メインコントローラ</strong>: Arduino Uno R4 WiFi</li>
+                        <li><strong>モータードライバー</strong>: L298N Motor Driver</li>
+                        <li><strong>ベース車体</strong>: タミヤ アームクローラー工作キット</li>
+                        <li><strong>電源</strong>: 単3乾電池 × 5本</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h4>ソフトウェア・開発環境</h4>
+                    <ul class="tech-list">
+                        <li><strong>ファームウェア</strong>: C++ + ArduinoBLE ライブラリ</li>
+                        <li><strong>モバイルアプリ</strong>: Kotlin + Bluetooth LE API</li>
+                        <li><strong>開発環境</strong>: Arduino IDE, Android Studio</li>
+                        <li><strong>バージョン管理</strong>: Git</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>通信プロトコル設計</h3>
+            <div class="tech-card">
+                <ul class="tech-list">
+                    <li><strong>通信方式</strong>: BLE (Bluetooth Low Energy)</li>
+                    <li><strong>Service UUID</strong>: <code>19B10000-E8F2-537E-4F6C-D104768A1214</code></li>
+                    <li><strong>Characteristic UUID</strong>: <code>19B10001-E8F2-537E-4F6C-D104768A1214</code></li>
+                    <li><strong>方向制御</strong>: F(前進), B(後退), L(左旋回), R(右旋回), S(停止)</li>
+                    <li><strong>速度制御</strong>: 0-9 (0=停止, 9=最高速度)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📁 システム構成</h2>
+            <h3>プロジェクト構造</h3>
+            <div class="code-block">
+arduino-arm-crawler/
+├── firmware/
+│   └── arm_crawler_controller.ino    # Arduinoファームウェア（C++）
+├── app/
+│   └── app/src/main/
+│       ├── java/com/example/armcrawlercontrol/
+│       │   └── MainActivity.kt       # メインアプリロジック（Kotlin）
+│       ├── res/layout/
+│       │   └── activity_main.xml     # UIレイアウト定義
+│       └── AndroidManifest.xml       # アプリケーション設定
+├── hardware/
+│   └── wiring_diagram.md            # 配線図・回路設計書
+├── images/
+│   ├── 20250718_145158.jpg         # 完成品画像
+│   └── README.md                   # 画像説明
+├── docs/
+│   └── resume.md                   # プロジェクトレジュメ
+└── README.md                       # プロジェクト概要
+            </div>
+
+            <h3>システムアーキテクチャ</h3>
+            <div class="code-block">
+[Android App] ←──BLE通信──→ [Arduino Uno R4 WiFi] ←──PWM制御──→ [L298N Driver] ←──→ [DCモーター]
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>💡 技術的な工夫・特徴</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h4>1. モジュール設計</h4>
+                    <ul class="feature-list">
+                        <li>関数分離による保守性向上</li>
+                        <li>エラーハンドリング機能</li>
+                        <li>デバッグ機能の実装</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h4>2. 安全性への配慮</h4>
+                    <ul class="feature-list">
+                        <li>通信エラー時の緊急停止</li>
+                        <li>安全な速度範囲での制限</li>
+                        <li>バッテリー保護機能</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h4>3. スケーラビリティ</h4>
+                    <ul class="feature-list">
+                        <li>拡張可能な設計構造</li>
+                        <li>調整可能なパラメータ</li>
+                        <li>新機能追加への対応</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📈 習得した技術・スキル</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h4>ハードウェア開発</h4>
+                    <ul class="tech-list">
+                        <li><strong>Arduino プログラミング</strong>: C++による組み込み開発</li>
+                        <li><strong>PWM制御</strong>: モーター速度制御の実装</li>
+                        <li><strong>回路設計</strong>: L298Nドライバーとの接続設計</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h4>ソフトウェア開発</h4>
+                    <ul class="tech-list">
+                        <li><strong>Android開発</strong>: Kotlin + Android SDK</li>
+                        <li><strong>BLE通信</strong>: Bluetooth Low Energy APIの活用</li>
+                        <li><strong>UI/UX設計</strong>: 直感的な操作インターフェース</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h4>システム設計</h4>
+                    <ul class="tech-list">
+                        <li><strong>IoT システム</strong>: デバイス間通信の設計・実装</li>
+                        <li><strong>プロトコル設計</strong>: 効率的な通信手順の策定</li>
+                        <li><strong>エラーハンドリング</strong>: 堅牢なシステム設計</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🎬 デモンストレーション</h2>
+            <div class="demo-section">
+                <h3>実機動作</h3>
+                <div class="demo-links">
+                    <a href="https://x.com/mirai_sousiyo39/status/1909121900678426879?t=9XamzxhPQmJzlQOsojcGTQ&s=19" target="_blank">動作確認動画</a>
+                    <a href="https://x.com/i/status/1909567755181080726" target="_blank">実際の操作動画</a>
+                </div>
+                <div class="image-container">
+                    <h4>完成品画像</h4>
+                    <img src="../images/20250718_145158.jpg" alt="完成品" style="max-width: 500px;">
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🏆 プロジェクトの意義・学習効果</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h4>技術的価値</h4>
+                    <ul class="feature-list">
+                        <li>ハードウェアとソフトウェアの統合経験</li>
+                        <li>リアルタイム制御システムの実装</li>
+                        <li>IoTデバイス間通信の実践的理解</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h4>学習価値</h4>
+                    <ul class="feature-list">
+                        <li>AI駆動開発手法の実践</li>
+                        <li>アイデアから実機までの完結した開発体験</li>
+                        <li>技術的課題の特定と解決プロセス</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h4>今後の展開可能性</h4>
+                    <ul class="feature-list">
+                        <li>カメラ追加、センサー連携</li>
+                        <li>自動運転機能、パターン学習</li>
+                        <li>より直感的な操作インターフェース</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <h3>📄 ライセンス・権利</h3>
+            <p><span class="badge">MIT License</span> <span class="badge">オープンソース</span> <span class="badge">GitHub公開</span></p>
+            <br>
+            <strong>開発者情報</strong><br>
+            tmomo086 (X: @mirai_sousiyo39)<br>
+            AI駆動開発: Grok3 + Claude4
+            <br><br>
+            <em>本プロジェクトは教育・学習目的で開発されたオープンソースプロジェクトです。</em>
+        </footer>
+    </div>
+</body>
+</html>
