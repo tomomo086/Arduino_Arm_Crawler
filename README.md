@@ -61,13 +61,14 @@ arduino-arm-crawler/
 │       ├── res/layout/
 │       │   └── activity_main.xml     # UIレイアウト
 │       └── AndroidManifest.xml       # アプリ設定
-├── docs/
-│   ├── setup_guide.md               # セットアップガイド
-│   ├── resume.md                    # Markdown版レジュメ
-│   ├── resume.html                  # HTML版レジュメ（一括表示）
-│   └── link_setup_guide.md          # 外部リンク設定ガイド
 ├── hardware/
-│   └── wiring_diagram.md            # 配線図
+│   └── wiring_diagram.md            # 配線図・回路設計書
+├── images/
+│   ├── 20250718_145158.jpg         # 完成品画像
+│   └── README.md                   # 画像説明
+├── docs/
+│   ├── resume.md                   # Markdown版レジュメ
+│   └── resume.html                 # HTML版レジュメ（一括表示）
 └── README.md
 ```
 
