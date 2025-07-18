@@ -120,13 +120,11 @@ arduino-arm-crawler/
 
 ## 📸 プロジェクトレジュメ
 
-### 実機の様子
-[実際に動かしてる様子:Xの投稿へ](https://x.com/i/status/1909567755181080726)
-
-### 画像
-
 #### 完成品の画像
 [![完成品サムネ](https://github.com/tomomo086/arduino-arm-crawler/blob/main/images/20250718_145158.jpg)(https://x.com/mirai_sousiyo39/status/1908703303556620438?t=Xs3wH5HRW7_UefoONuI79Q&s=19)
+
+### 実機の様子
+[実際に動かしてる様子:Xの投稿へ](https://x.com/i/status/1909567755181080726)
 
 ### パフォーマンス
 
@@ -142,7 +140,6 @@ arduino-arm-crawler/
 
 MIT License
 
-## 🙏 謝辞
+## 作成者🔧
+tmomo086+Grok3+Claude4
 
-- Arduino Community
-- Tamiya Educational Construction Series
