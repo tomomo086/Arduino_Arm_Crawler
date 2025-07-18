@@ -43,6 +43,7 @@ Thumbs.db
 # IDE files
 .vscode/
 .idea/
+.claude/
 
 # Backup files
 *~

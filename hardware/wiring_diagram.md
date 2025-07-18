@@ -31,8 +31,8 @@ Arduino Uno R4 WiFi、L298N Motor Driver、および Tamiya Arm Crawler のモ�
 
 | 電源 | 接続先 | 電圧 | 説明 |
 |------|--------|------|------|
-| 7.2V Battery + | L298N VCC | 7.2V | モーター駆動電源 |
-| 7.2V Battery - | L298N GND | 0V | モーター電源グランド |
+| 単3×5本 + | L298N VCC | 7.5V | モーター駆動電源 |
+| 単3×5本 - | L298N GND | 0V | モーター電源グランド |
 | USB Power Bank | Arduino USB-C | 5V | Arduino電源 |
 | Arduino GND | L298N GND | 0V | 共通グランド |
 
@@ -64,8 +64,11 @@ OUT4       →    右モーター黒線 (負極)
 
 ### 4. 電源配線
 ```
-7.2V Battery + → L298N VCC
-7.2V Battery - → L298N GND
+# モーター駆動電源
+単3×5本 + → L298N VCC (7.5V)
+単3×5本 - → L298N GND
+
+# Arduino電源
 USB Battery    → Arduino USB-C
 Arduino GND    → L298N GND (共通グランド)
 ```
@@ -74,7 +77,7 @@ Arduino GND    → L298N GND (共通グランド)
 
 ### 電源分離
 - **Arduino電源**: 5V USB電源（独立）
-- **モーター電源**: 7.2V バッテリー（L298N経由）
+- **モーター電源**: 7.5V 乾電池（L298N経由）
 - **共通グランド**: Arduino GND と L298N GND を接続
 
 ### 配線チェック
@@ -90,7 +93,7 @@ Arduino GND    → L298N GND (共通グランド)
 ## 🔍 トラブルシューティング
 
 ### モーターが動かない場合
-1. 電源電圧の確認 (7.2V)
+1. 電源電圧の確認 (7.5V)
 2. L298N への配線確認  
 3. Arduino プログラムの確認
 4. シリアルモニターでコマンド受信確認

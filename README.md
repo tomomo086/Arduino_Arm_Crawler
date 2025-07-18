@@ -46,7 +46,7 @@
 - **通信遅延**: < 50ms
 - **動作範囲**: 約10m（屋内）
 - **速度範囲**: 0.1m/s - 0.8m/s
-- **バッテリー**: Arduino 8時間 / モーター 2時間
+- **バッテリー**: Arduino 8時間 / モーター 約1時間（乾電池5本）
 
 ## 📁 プロジェクト構造
 
@@ -54,11 +54,17 @@
 arduino-arm-crawler/
 ├── firmware/
 │   └── arm_crawler_controller.ino    # Arduinoファームウェア
-├── android-app/
-│   ├── MainActivity.kt               # メインアプリロジック
-│   └── activity_main.xml             # UIレイアウト
+├── app/
+│   └── app/src/main/
+│       ├── java/com/example/armcrawlercontrol/
+│       │   └── MainActivity.kt       # メインアプリロジック
+│       ├── res/layout/
+│       │   └── activity_main.xml     # UIレイアウト
+│       └── AndroidManifest.xml       # アプリ設定
 ├── docs/
 │   └── setup_guide.md               # セットアップガイド
+├── hardware/
+│   └── wiring_diagram.md            # 配線図
 └── README.md
 ```
 

@@ -2,17 +2,15 @@
 
 このガイドでは、Arduino Arm Crawler Remote Control システムの完全なセットアップ手順を説明します。
 
-## 📋 必要な部品リスト
+## 📋 必要な部品
 
 ### 電子部品
-| 部品名 | 数量 | 備考 |
-|--------|------|------|
-| Arduino Uno R4 WiFi | 1 | メインコントローラー |
-| L298N Motor Driver | 1 | モーター制御用 |
-| Tamiya Arm Crawler | 1 | ベース車両 |
-| 7.2V Li-ion Battery | 1 | モーター駆動用 |
-| 5V USB Power Bank | 1 | Arduino電源用 |
-| ジャンパーワイヤー | 適量 | オス-オス、オス-メス |
+- Arduino Uno R4 WiFi（メインコントローラー）
+- L298N Motor Driver（モーター制御用）
+- Tamiya Arm Crawler（ベース車両）
+- 単3乾電池×5本（モーター駆動用）
+- 5V USB Power Bank（Arduino電源用）
+- ジャンパーワイヤー（オス-オス、オス-メス）
 
 ### 工具
 - ドライバー
@@ -54,8 +52,8 @@
 
 ```
 L298N Power Connections:
-- VCC (L298N) → 7.2V Battery (+)
-- GND (L298N) → 7.2V Battery (-) & Arduino GND
+- VCC (L298N) → 単3×5本 (+) (7.5V)
+- GND (L298N) → 単3×5本 (-) & Arduino GND
 - 5V (L298N) → 使用しない（Arduino独立電源のため）
 
 Arduino Power:
@@ -142,7 +140,7 @@ L298N → Motors:
    ```
    1. Android Studio を起動
    2. "Open an existing project" を選択
-   3. android-app フォルダを開く
+   3. app フォルダを開く
    4. Gradle sync 完了まで待機
    ```
 
