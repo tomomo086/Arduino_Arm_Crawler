@@ -63,7 +63,8 @@ arduino-arm-crawler/
 │       └── AndroidManifest.xml       # アプリ設定
 ├── docs/
 │   ├── setup_guide.md               # セットアップガイド
-│   └── resume.md                    # プロジェクトレジュメ
+│   ├── resume.md                    # Markdown版レジュメ
+│   └── resume.html                  # HTML版レジュメ（一括表示）
 ├── hardware/
 │   └── wiring_diagram.md            # 配線図
 └── README.md
