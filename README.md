@@ -126,7 +126,7 @@ arduino-arm-crawler/
 ### 画像
 
 #### 完成品の画像
-[![@mirai_sousiyo39](https://x.com/mirai_sousiyo39/status/1908703303556620438?t=9i-GcVCbfJm1g-JqDeZRjw&s=19)](https://x.com/mirai_sousiyo39/status/1908703303556620438?t=Xs3wH5HRW7_UefoONuI79Q&s=19)
+[![完成品サムネ](https://github.com/tomomo086/arduino-arm-crawler/blob/main/images/20250718_145158.jpg)(https://x.com/mirai_sousiyo39/status/1908703303556620438?t=Xs3wH5HRW7_UefoONuI79Q&s=19)
 
 ### パフォーマンス
 
