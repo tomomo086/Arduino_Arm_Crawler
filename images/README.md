@@ -7,10 +7,7 @@
 以下の画像ファイルを配置することで、レジュメに写真が表示されます：
 
 ### プロジェクト写真
-- `completed_system.jpg` - 完成したシステムの写真
-- `hardware_setup.jpg` - ハードウェア構成の写真
-- `app_screenshot.png` - Androidアプリ画面のスクリーンショット
-- `wiring_diagram.jpg` - 配線図の写真
+- `` - 完成したシステムの写真
 
 ### 動画サムネイル
 - `demo_thumbnail.jpg` - 基本動作デモのサムネイル

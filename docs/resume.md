@@ -1,115 +1,177 @@
-# Arduino Arm Crawler プロジェクトレジュメ
+# Arduino Arm Crawler Remote Control - プロジェクトレジュメ
 
-## 🎯 プロジェクト概要
+## 📋 プロジェクト概要
 
-タミヤのアームクローラーをArduino Uno R4 WiFiとAndroidアプリでBluetooth Low Energy (BLE)制御するIoTプロジェクトです。
+**プロジェクト名**: Arduino Arm Crawler Remote Control  
+**開発期間**: 2024年  
+**開発者**: tmomo086 (X: くろT@mirai_sousiyo39) + AI駆動開発 (Grok 3 + Cursor & Claude 4.0)  
+**プロジェクト種別**: IoTロボット制御システム / モバイルアプリ開発
 
-## 📸 プロジェクト写真
+### プロジェクト説明
+タミヤのアームクローラー工作キットをベースに、Arduino Uno R4 WiFiとAndroidアプリを使用してBLE（Bluetooth Low Energy）でワイヤレス制御するIoTシステムを開発。**Grok 3による初期開発とCursor & Claude 4.0による編集・改良を組み合わせたAI駆動開発手法**を用いた初作品として、入門的なロボット制御システムを構築。
 
-### 完成したシステム
-![完成したシステム](./images/completed_system.jpg)
+## 🎯 技術的成果
 
-### ハードウェア構成
-![ハードウェア構成](./images/hardware_setup.jpg)
+### 主要機能
+- **リアルタイム制御**: 前進・後退・左右旋回・停止の即座な応答
+- **10段階速度調整**: PWM制御による精密なスピードコントロール
+- **BLE通信**: 低遅延（約50ms）での安定通信
+- **直感的UI**: タッチベースの操作インターフェース
 
-### Androidアプリ画面
-![Androidアプリ](./images/app_screenshot.png)
+### パフォーマンス指標
+| 項目 | 仕様/性能 |
+|------|-----------|
+| 通信遅延 | < 50ms |
+| 動作範囲 | 約10m（屋内環境） |
+| 速度範囲 | 0.1m/s - 0.8m/s |
+| Arduino稼働時間 | 約8時間 |
+| モーター稼働時間 | 約1時間（乾電池5本） |
+| 対応Android | 8.0+ |
 
-### 配線図
-![配線図](./images/wiring_diagram.jpg)
-
-## 🎥 デモ動画
-
-### 基本動作デモ
-[![基本動作デモ](./images/demo_thumbnail.jpg)](./videos/basic_demo.mp4)
-
-### 速度制御デモ
-[![速度制御デモ](./images/speed_control_thumbnail.jpg)](./videos/speed_control_demo.mp4)
-
-### アプリ操作デモ
-[![アプリ操作デモ](./images/app_demo_thumbnail.jpg)](./videos/app_demo.mp4)
-
-## 🛠️ 技術スタック
+## 🛠️ 使用技術・ツール
 
 ### ハードウェア
-- **Arduino Uno R4 WiFi** (BLE通信・モーター制御)
-- **L298N Motor Driver** (モーター駆動)
-- **Tamiya Arm Crawler** (ベース車体)
+- **メインコントローラ**: Arduino Uno R4 WiFi
+- **モータードライバー**: L298N Motor Driver
+- **ベース車体**: タミヤ アームクローラー工作キット
+- **電源**: 単3乾電池 × 5本
 
-### ソフトウェア
-- **Arduino**: C++ + ArduinoBLE ライブラリ
-- **Android**: Kotlin + Bluetooth LE API
-- **通信**: BLE (UUID ベースのサービス・特性)
+### ソフトウェア・開発環境
+- **ファームウェア**: C++ + ArduinoBLE ライブラリ
+- **モバイルアプリ**: Kotlin + Bluetooth LE API
+- **メインAI開発**: Grok 3 (初期開発・コア機能実装)
+- **編集・改良ツール**: [Cursor](https://cursor.sh/) + Claude 4.0
+- **従来型IDE**: Arduino IDE, Android Studio
+- **バージョン管理**: Git
+- **AI支援機能**: 初期コード生成・編集・デバッグ・ドキュメント整備
 
-## 📊 パフォーマンス
+### 通信プロトコル設計
+- **通信方式**: BLE (Bluetooth Low Energy)
+- **Service UUID**: `19B10000-E8F2-537E-4F6C-D104768A1214`
+- **Characteristic UUID**: `19B10001-E8F2-537E-4F6C-D104768A1214`
+- **コマンド体系**: 
+  - 方向制御: `F`(前進), `B`(後退), `L`(左旋回), `R`(右旋回), `S`(停止)
+  - 速度制御: `0`-`9` (0=停止, 9=最高速度)
 
-- **通信遅延**: < 50ms
-- **動作範囲**: 約10m（屋内）
-- **速度範囲**: 0.1m/s - 0.8m/s
-- **バッテリー**: Arduino 8時間 / モーター 約1時間（乾電池5本）
+## 📁 システム構成
 
-## 🎯 学習成果
-
-このプロジェクトで習得した技術：
-
-- **IoT開発**: ハードウェア制御とモバイルアプリの統合
-- **BLE通信**: Arduino-Android間のリアルタイム通信
-- **組み込み制御**: PWMによるモーター制御・エラーハンドリング
-- **モバイル開発**: Kotlin + Bluetooth LE API
-- **システム設計**: 安全性を考慮した制御システム
-
-## 🔧 技術的な特徴
-
-- **モジュール設計**: 関数分離による保守性向上
-- **エラーハンドリング**: 接続切断・コマンド異常時の安全停止
-- **スケーラブル**: 速度制御アルゴリズムの調整可能
-- **デバッグ対応**: シリアル出力による動作状況確認
-
-## 📁 プロジェクト構造
-
+### プロジェクト構造
 ```
 arduino-arm-crawler/
 ├── firmware/
-│   └── arm_crawler_controller.ino    # Arduinoファームウェア
+│   └── arm_crawler_controller.ino    # Arduinoファームウェア（C++）
 ├── app/
 │   └── app/src/main/
 │       ├── java/com/example/armcrawlercontrol/
-│       │   └── MainActivity.kt       # メインアプリロジック
+│       │   └── MainActivity.kt       # メインアプリロジック（Kotlin）
 │       ├── res/layout/
-│       │   └── activity_main.xml     # UIレイアウト
-│       └── AndroidManifest.xml       # アプリ設定
-├── docs/
-│   ├── setup_guide.md               # セットアップガイド
-│   └── resume.md                    # このレジュメ
+│       │   └── activity_main.xml     # UIレイアウト定義
+│       └── AndroidManifest.xml       # アプリケーション設定
 ├── hardware/
-│   └── wiring_diagram.md            # 配線図
-├── images/                          # プロジェクト写真
-│   ├── completed_system.jpg
-│   ├── hardware_setup.jpg
-│   ├── app_screenshot.png
-│   ├── wiring_diagram.jpg
-│   ├── demo_thumbnail.jpg
-│   ├── speed_control_thumbnail.jpg
-│   └── app_demo_thumbnail.jpg
-├── videos/                          # デモ動画
-│   ├── basic_demo.mp4
-│   ├── speed_control_demo.mp4
-│   └── app_demo.mp4
-└── README.md
+│   └── wiring_diagram.md            # 配線図・回路設計書
+├── images/
+│   ├── 20250718_145158.jpg         # 完成品画像
+│   └── README.md                   # 画像説明
+├── docs/
+│   └── resume.md                   # プロジェクトレジュメ（本ファイル）
+└── README.md                       # プロジェクト概要
 ```
 
-## 🚀 今後の展開
+### システムアーキテクチャ
+```
+[Android App] ←──BLE通信──→ [Arduino Uno R4 WiFi] ←──PWM制御──→ [L298N Driver] ←──→ [DCモーター]
+```
 
-- **Webアプリ対応**: ブラウザからの制御機能追加
-- **AI制御**: 自動走行機能の実装
-- **センサー追加**: 距離センサー・カメラの搭載
-- **クラウド連携**: 動作ログのクラウド保存
+## 💡 技術的な工夫・特徴
 
-## 📄 ライセンス
+### 1. モジュール設計
+- **関数分離**: 機能ごとに関数を分割し、保守性を向上
+- **エラーハンドリング**: 接続切断時やコマンド異常時の安全停止機能
+- **デバッグ機能**: シリアル出力による動作状況の可視化
 
-MIT License
+### 2. 安全性への配慮
+- **自動停止機能**: 通信エラー時の緊急停止
+- **速度制限**: 安全な速度範囲での動作制限
+- **バッテリー保護**: 過放電防止のための監視
 
-## 🙏 謝辞
+### 3. スケーラビリティ
+- **拡張可能な設計**: 新機能追加に対応した構造
+- **調整可能なパラメータ**: 速度カーブやタイミングの調整可能
 
-- Arduino Community
-- Tamiya Educational Construction Series 
+## 🚀 開発プロセス・手法
+
+### AI駆動開発の実践
+- **AI ツール**: Grok3 + Claude4 を活用
+- **開発手法**: プロトタイプ→テスト→改良のイテレーション
+- **学習アプローチ**: 実践的な問題解決を通じた技術習得
+
+### 開発段階
+1. **要件定義**: 基本機能の策定
+2. **ハードウェア設計**: 配線・回路設計
+3. **ファームウェア開発**: Arduino制御プログラム
+4. **アプリ開発**: Android UI・通信機能
+5. **統合テスト**: システム全体の動作確認
+6. **性能調整**: 遅延・速度の最適化
+
+## 📈 習得した技術・スキル
+
+### ハードウェア開発
+- **Arduino プログラミング**: C++による組み込み開発
+- **PWM制御**: モーター速度制御の実装
+- **回路設計**: L298Nドライバーとの接続設計
+
+### ソフトウェア開発
+- **Android開発**: Kotlin + Android SDK
+- **BLE通信**: Bluetooth Low Energy APIの活用
+- **UI/UX設計**: 直感的な操作インターフェースの設計
+
+### システム設計
+- **IoT システム**: デバイス間通信の設計・実装
+- **プロトコル設計**: 効率的な通信手順の策定
+- **エラーハンドリング**: 堅牢なシステム設計
+
+### 開発手法・ツール
+- **バージョン管理**: Git を使った開発管理
+- **AI駆動開発**: AIツールを活用した効率的な開発
+- **デバッグ**: ハードウェア・ソフトウェア両面での問題解決
+
+## 🎬 デモンストレーション
+
+### 実機動作
+- **X（Twitter）投稿**: [動作確認動画](https://x.com/mirai_sousiyo39/status/1909121900678426879?t=9XamzxhPQmJzlQOsojcGTQ&s=19)
+- **実際の操作**: [操作動画](https://x.com/i/status/1909567755181080726)
+
+### 完成品画像
+<img src="../images/20250718_145158.jpg" alt="完成品" width="300px">
+
+## 🏆 プロジェクトの意義・学習効果
+
+### 技術的価値
+- **統合システム開発**: ハードウェアとソフトウェアの統合経験
+- **リアルタイム制御**: 即応性が求められるシステムの実装
+- **無線通信**: IoTデバイス間通信の実践的理解
+
+### 学習価値
+- **AI駆動開発**: Grok 3による初期開発 + Cursor & Claude 4.0による編集・改良プロセスの実践
+- **プロトタイピング**: アイデアから実機までの完結した開発体験
+- **問題解決**: 技術的課題の特定と解決プロセス
+- **AI支援プログラミング**: プロンプトエンジニアリングとコード品質管理
+
+### 今後の展開可能性
+- **機能拡張**: カメラ追加、センサー連携
+- **制御高度化**: 自動運転機能、パターン学習
+- **UI改善**: より直感的な操作インターフェース
+
+## 📄 ライセンス・権利
+
+**ライセンス**: MIT License  
+**オープンソース**: GitHubで公開  
+**利用制限**: なし（MIT License準拠）
+
+---
+
+**開発者情報**  
+tmomo086 (X: @mirai_sousiyo39)  
+AI駆動開発: Grok 3 (メイン開発) + Cursor & Claude 4.0 (編集・改良)
+
+*本プロジェクトは、Grok 3による初期開発を基盤とし、Cursor IDE とClaude 4.0による編集・改良を加えたAI駆動開発の実践として、教育・学習目的で開発されたオープンソースプロジェクトです。*
