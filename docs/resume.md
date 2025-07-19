@@ -4,11 +4,11 @@
 
 **プロジェクト名**: Arduino Arm Crawler Remote Control  
 **開発期間**: 2024年  
-**開発者**: tmomo086 (X: くろT@mirai_sousiyo39) + AI駆動開発 (Grok 3 + Cursor & Claude 4.0)  
+**開発者**: tmomo086 (X: くろT@mirai_sousiyo39) + AI駆動開発 (Grok 3 + Claude 4 + Cursor + ClaudeCode)  
 **プロジェクト種別**: IoTロボット制御システム / モバイルアプリ開発
 
 ### プロジェクト説明
-タミヤのアームクローラー工作キットをベースに、Arduino Uno R4 WiFiとAndroidアプリを使用してBLE（Bluetooth Low Energy）でワイヤレス制御するIoTシステムを開発。**Grok 3による初期開発とCursor & Claude 4.0による編集・改良を組み合わせたAI駆動開発手法**を用いた初作品として、入門的なロボット制御システムを構築。
+タミヤのアームクローラー工作キットをベースに、Arduino Uno R4 WiFiとAndroidアプリを使用してBLE（Bluetooth Low Energy）でワイヤレス制御するIoTシステムを開発。**AI駆動開発手法**を段階的に活用し、初期開発ではUSB上のWinPython環境でGrok 3、Claude 4、Cursorを使用し、Streamlit対応時にはClaudeCodeを活用した開発プロセスを実践。入門的なロボット制御システムを構築。
 
 ## 🎯 技術的成果
 
@@ -39,11 +39,11 @@
 ### ソフトウェア・開発環境
 - **ファームウェア**: C++ + ArduinoBLE ライブラリ
 - **モバイルアプリ**: Kotlin + Bluetooth LE API
-- **メインAI開発**: Grok 3 (初期開発・コア機能実装)
-- **編集・改良ツール**: [Cursor](https://cursor.sh/) + Claude 4.0
+- **初期開発環境**: USB上のWinPython + Grok 3 + Claude 4 + Cursor
+- **Streamlit対応**: ClaudeCode によるWebアプリケーション開発
 - **従来型IDE**: Arduino IDE, Android Studio
 - **バージョン管理**: Git
-- **AI支援機能**: 初期コード生成・編集・デバッグ・ドキュメント整備
+- **AI支援機能**: 初期コード生成・編集・デバッグ・ドキュメント整備・Webアプリ開発
 
 ### 通信プロトコル設計
 - **通信方式**: BLE (Bluetooth Low Energy)
@@ -101,7 +101,8 @@ arduino-arm-crawler/
 ## 🚀 開発プロセス・手法
 
 ### AI駆動開発の実践
-- **AI ツール**: Grok3 + Claude4 を活用
+- **初期開発**: USB上のWinPython環境でGrok 3、Claude 4、Cursorを活用
+- **Streamlit対応**: ClaudeCodeによるWebアプリケーション開発
 - **開発手法**: プロトタイプ→テスト→改良のイテレーション
 - **学習アプローチ**: 実践的な問題解決を通じた技術習得
 
@@ -132,7 +133,8 @@ arduino-arm-crawler/
 
 ### 開発手法・ツール
 - **バージョン管理**: Git を使った開発管理
-- **AI駆動開発**: AIツールを活用した効率的な開発
+- **AI駆動開発**: 段階的なAIツール活用（WinPython→Streamlit）
+- **Webアプリ開発**: ClaudeCodeによるStreamlitアプリケーション構築
 - **デバッグ**: ハードウェア・ソフトウェア両面での問題解決
 
 ## 🎬 デモンストレーション
@@ -152,10 +154,11 @@ arduino-arm-crawler/
 - **無線通信**: IoTデバイス間通信の実践的理解
 
 ### 学習価値
-- **AI駆動開発**: Grok 3による初期開発 + Cursor & Claude 4.0による編集・改良プロセスの実践
+- **AI駆動開発**: 段階的なAIツール活用（WinPython環境でのGrok 3、Claude 4、Cursor → ClaudeCodeによるStreamlit対応）
 - **プロトタイピング**: アイデアから実機までの完結した開発体験
 - **問題解決**: 技術的課題の特定と解決プロセス
 - **AI支援プログラミング**: プロンプトエンジニアリングとコード品質管理
+- **Webアプリ開発**: ClaudeCodeを活用したStreamlitアプリケーション構築
 
 ### 今後の展開可能性
 - **機能拡張**: カメラ追加、センサー連携
@@ -172,6 +175,6 @@ arduino-arm-crawler/
 
 **開発者情報**  
 tmomo086 (X: @mirai_sousiyo39)  
-AI駆動開発: Grok 3 (メイン開発) + Cursor & Claude 4.0 (編集・改良)
+AI駆動開発: 初期開発（USB上のWinPython + Grok 3 + Claude 4 + Cursor）→ Streamlit対応（ClaudeCode）
 
-*本プロジェクトは、Grok 3による初期開発を基盤とし、Cursor IDE とClaude 4.0による編集・改良を加えたAI駆動開発の実践として、教育・学習目的で開発されたオープンソースプロジェクトです。*
+*本プロジェクトは、段階的なAI駆動開発の実践として、初期開発ではUSB上のWinPython環境でGrok 3、Claude 4、Cursorを活用し、Streamlit対応時にはClaudeCodeを使用した開発プロセスを実践した教育・学習目的のオープンソースプロジェクトです。*
