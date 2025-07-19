@@ -4,7 +4,7 @@
 ![Platform: Arduino | Android](https://img.shields.io/badge/Platform-Arduino%20%7C%20Android-green.svg)
 ![Language: C++ | Kotlin](https://img.shields.io/badge/Language-C%2B%2B%20%7C%20Kotlin-orange.svg)
 ![AI Development: Grok3 | Claude4 | ClaudeCode](https://img.shields.io/badge/AI%20Development-Grok3%20%7C%20Claude4%20%7C%20ClaudeCode-blue.svg)
-![Vibe Coding: AI-Driven](https://img.shields.io/badge/Vibe%20Coding-AI--Driven-red.svg)
+![Development Method: Vibe Coding](https://img.shields.io/badge/Development%20Method-Vibe%20Coding-red.svg)
 ![Web Framework: Streamlit](https://img.shields.io/badge/Web%20Framework-Streamlit-yellow.svg)
 ![Status: Portfolio](https://img.shields.io/badge/Status-Portfolio-purple.svg)
 
