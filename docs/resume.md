@@ -8,7 +8,7 @@
 **プロジェクト種別**: IoTロボット制御システム / モバイルアプリ開発
 
 ### プロジェクト説明
-タミヤのアームクローラー工作キットをベースに、Arduino Uno R4 WiFiとAndroidアプリを使用してBLE（Bluetooth Low Energy）でワイヤレス制御するIoTシステムを開発。**AI駆動開発手法**を段階的に活用し、初期開発ではUSB上のWinPython環境でGrok 3、Claude 4、Cursorを使用し、Streamlit対応時にはClaudeCodeを活用した開発プロセスを実践。入門的なロボット制御システムを構築。
+タミヤのアームクローラー工作キットをベースに、Arduino Uno R4 WiFiとAndroidアプリを使用してBLE（Bluetooth Low Energy）でワイヤレス制御するIoTシステムを開発。**AI駆動開発手法**を段階的に活用し、初期開発ではWinPython環境でGrok 3、Claude 4、Cursorを使用し、Streamlit対応時にはClaudeCodeを活用した開発プロセスを実践。入門的なロボット制御システムを構築。
 
 ## 🎯 技術的成果
 
@@ -39,7 +39,7 @@
 ### ソフトウェア・開発環境
 - **ファームウェア**: C++ + ArduinoBLE ライブラリ
 - **モバイルアプリ**: Kotlin + Bluetooth LE API
-- **初期開発環境**: USB上のWinPython + Grok 3 + Claude 4 + Cursor
+- **初期開発環境**: WinPython + Grok 3 + Claude 4 + Cursor
 - **Streamlit対応**: ClaudeCode によるWebアプリケーション開発
 - **従来型IDE**: Arduino IDE, Android Studio
 - **バージョン管理**: Git
@@ -101,7 +101,7 @@ arduino-arm-crawler/
 ## 🚀 開発プロセス・手法
 
 ### AI駆動開発の実践
-- **初期開発**: USB上のWinPython環境でGrok 3、Claude 4、Cursorを活用
+- **初期開発**: WinPython環境でGrok 3、Claude 4、Cursorを活用
 - **Streamlit対応**: ClaudeCodeによるWebアプリケーション開発
 - **開発手法**: プロトタイプ→テスト→改良のイテレーション
 - **学習アプローチ**: 実践的な問題解決を通じた技術習得
@@ -175,6 +175,6 @@ arduino-arm-crawler/
 
 **開発者情報**  
 tmomo086 (X: @mirai_sousiyo39)  
-AI駆動開発: 初期開発（USB上のWinPython + Grok 3 + Claude 4 + Cursor）→ Streamlit対応（ClaudeCode）
+AI駆動開発: 初期開発（WinPython + Grok 3 + Claude 4 + Cursor）→ Streamlit対応（ClaudeCode）
 
-*本プロジェクトは、段階的なAI駆動開発の実践として、初期開発ではUSB上のWinPython環境でGrok 3、Claude 4、Cursorを活用し、Streamlit対応時にはClaudeCodeを使用した開発プロセスを実践した教育・学習目的のオープンソースプロジェクトです。*
+*本プロジェクトは、段階的なAI駆動開発の実践として、初期開発ではWinPython環境でGrok 3、Claude 4、Cursorを活用し、Streamlit対応時にはClaudeCodeを使用した開発プロセスを実践した教育・学習目的のオープンソースプロジェクトです。*
