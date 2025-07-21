@@ -3,7 +3,7 @@
 
 ![Platform: Arduino | Android](https://img.shields.io/badge/Platform-Arduino%20%7C%20Android-green.svg)
 ![Language: C++ | Kotlin](https://img.shields.io/badge/Language-C%2B%2B%20%7C%20Kotlin-orange.svg)
-![AI Development: Grok3 (with Claude4/ClaudeCode)](https://img.shields.io/badge/AI%20Development-Grok3%20(with%20Claude4%2FClaudeCode)-blue.svg)
+![AI Development: Grok3](https://img.shields.io/badge/AI%20Development-Grok3-blue.svg)
 ![Development Method: Vibe Coding](https://img.shields.io/badge/Development%20Method-Vibe%20Coding-red.svg)
 
 ![Status: Portfolio](https://img.shields.io/badge/Status-Portfolio-purple.svg)
@@ -37,7 +37,7 @@
 
 タミヤのアームクローラー工作キットをワイヤレス化し、AndroidアプリからBLE通信でリアルタイム制御するシステムです。
 
-**段階的なAI駆動開発**による初作品として、基本はGrok 3で開発し、必要に応じてClaude 4、Cursor、ClaudeCodeを補助的に活用した開発プロセスを実践。IoT・ロボット制御の入門プロジェクトとして制作しました。
+**AI駆動開発**による初作品として、Grok 3で開発したIoT・ロボット制御の入門プロジェクトです。
 
 ### 主な機能
 - **リアルタイム制御**: 前進・後退・左右旋回・停止
@@ -57,9 +57,9 @@
 - **通信**: BLE (UUID ベースのサービス・特性)
 
 ### 開発ツール
-- **AI支援開発**: Grok 3（メイン）+ Claude 4 + Cursor + ClaudeCode（補助）
+- **AI支援開発**: Grok 3
 - **統合開発環境**: Arduino IDE, Android Studio
-- **AI支援機能**: コード生成・デバッグ・リファクタリング・ドキュメント編集
+- **AI支援機能**: コード生成・デバッグ・リファクタリング
 
 ## 📱 システム構成
 
@@ -138,7 +138,7 @@ arduino-arm-crawler/
 
 このプロジェクトで習得した技術：
 
-- **AI駆動開発**: 基本はGrok 3で開発し、必要に応じてClaude 4、Cursor、ClaudeCodeを補助的に活用
+- **AI駆動開発**: Grok 3による開発
 - **IoT開発**: ハードウェア制御とモバイルアプリの統合
 - **BLE通信**: Arduino-Android間のリアルタイム通信
 - **組み込み制御**: PWMによるモーター制御・エラーハンドリング
@@ -165,15 +165,15 @@ arduino-arm-crawler/
 
 このプロジェクトの開発には以下のツールを使用しました：
 
-- **AI支援開発**: Grok 3（メイン）+ Claude 4 + Cursor + ClaudeCode（補助）
+- **AI支援開発**: Grok 3
 - **統合開発環境**: Arduino IDE, Android Studio
-- **AI支援機能**: コード生成・デバッグ・リファクタリング・ドキュメント編集
+- **AI支援機能**: コード生成・デバッグ・リファクタリング
 
 ## 👨‍💻 作成者
 
 **tmomo086** ([@mirai_sousiyo39](https://x.com/mirai_sousiyo39))
 
-> 本プロジェクトは、段階的なAI駆動開発の実践として、基本はGrok 3で開発し、必要に応じてClaude 4、Cursor、ClaudeCodeを補助的に活用した開発プロセスを実践した作品です。
+> 本プロジェクトは、Grok 3によるAI駆動開発の実践として制作した作品です。
 
-> 💡 **注記**: このREADMEファイルの編集・修正には、開発に使用したGrok 3以外のAIツール（Claude）を使用しています。
+> 💡 **注記**: このREADMEファイルの編集・修正には、記事執筆用のAIツール（Claude4、ClaudeCode、Cursor）を使用しています。
 
