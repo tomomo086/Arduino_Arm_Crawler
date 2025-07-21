@@ -37,7 +37,7 @@
 
 タミヤのアームクローラー工作キットをワイヤレス化し、AndroidアプリからBLE通信でリアルタイム制御するシステムです。
 
-**段階的なAI駆動開発**による初作品として、初期開発ではWinPython環境でGrok 3、Claude 4、Cursorを使用し、Streamlit対応時にはClaudeCodeを活用した開発プロセスを実践。IoT・ロボット制御の入門プロジェクトとして制作しました。
+**段階的なAI駆動開発**による初作品として、初期開発ではGrok 3、Claude 4、Cursorを使用し、Streamlit対応時にはClaudeCodeを活用した開発プロセスを実践。IoT・ロボット制御の入門プロジェクトとして制作しました。
 
 ### 主な機能
 - **リアルタイム制御**: 前進・後退・左右旋回・停止
@@ -57,10 +57,10 @@
 - **通信**: BLE (UUID ベースのサービス・特性)
 
 ### 開発ツール
-- **初期開発環境**: WinPython + Grok 3 + Claude 4 + Cursor
-- **Streamlit対応**: ClaudeCode によるWebアプリケーション開発
-- **従来型IDE**: Arduino IDE, Android Studio
-- **AI支援**: コード生成・デバッグ・リファクタリング・ドキュメント編集・Webアプリ開発
+- **AI支援開発**: Grok 3 + Claude 4 + Cursor + ClaudeCode
+- **統合開発環境**: Arduino IDE, Android Studio
+- **Webアプリ開発**: Streamlit対応（ClaudeCode）
+- **AI支援機能**: コード生成・デバッグ・リファクタリング・ドキュメント編集
 
 ## 📱 システム構成
 
@@ -139,7 +139,7 @@ arduino-arm-crawler/
 
 このプロジェクトで習得した技術：
 
-- **AI駆動開発**: 段階的なAIツール活用（WinPython環境でのGrok 3、Claude 4、Cursor → ClaudeCodeによるStreamlit対応）
+- **AI駆動開発**: 段階的なAIツール活用（Grok 3、Claude 4、Cursor → ClaudeCodeによるStreamlit対応）
 - **IoT開発**: ハードウェア制御とモバイルアプリの統合
 - **BLE通信**: Arduino-Android間のリアルタイム通信
 - **組み込み制御**: PWMによるモーター制御・エラーハンドリング
@@ -166,14 +166,14 @@ arduino-arm-crawler/
 
 このプロジェクトの開発には以下のツールを使用しました：
 
-- **初期開発環境**: WinPython + Grok 3 + Claude 4 + Cursor - 初期開発・コア機能実装
-- **Streamlit対応**: ClaudeCode - Webアプリケーション開発
+- **AI支援開発**: Grok 3 + Claude 4 + Cursor + ClaudeCode
 - **統合開発環境**: Arduino IDE, Android Studio
-- **AI支援範囲**: コード生成・デバッグ・リファクタリング・ドキュメント整備・Webアプリ開発
+- **Webアプリ開発**: Streamlit対応（ClaudeCode）
+- **AI支援機能**: コード生成・デバッグ・リファクタリング・ドキュメント編集
 
 ## 👨‍💻 作成者
 
 **tmomo086** ([@mirai_sousiyo39](https://x.com/mirai_sousiyo39))
 
-> 本プロジェクトは、段階的なAI駆動開発の実践として、初期開発ではWinPython環境でGrok 3、Claude 4、Cursorを活用し、Streamlit対応時にはClaudeCodeを使用した開発プロセスを実践した作品です。
+> 本プロジェクトは、段階的なAI駆動開発の実践として、初期開発ではGrok 3、Claude 4、Cursorを活用し、Streamlit対応時にはClaudeCodeを使用した開発プロセスを実践した作品です。
 
