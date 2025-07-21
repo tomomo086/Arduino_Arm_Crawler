@@ -175,3 +175,5 @@ arduino-arm-crawler/
 
 > 本プロジェクトは、段階的なAI駆動開発の実践として、基本はGrok 3で開発し、必要に応じてClaude 4、Cursor、ClaudeCodeを補助的に活用した開発プロセスを実践した作品です。
 
+> 💡 **注記**: このREADMEファイルの編集・修正には、開発に使用したGrok 3以外のAIツール（Claude）を使用しています。
+
