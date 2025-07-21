@@ -8,7 +8,7 @@
 **プロジェクト種別**: IoTロボット制御システム / モバイルアプリ開発
 
 ### プロジェクト説明
-タミヤのアームクローラー工作キットをベースに、Arduino Uno R4 WiFiとAndroidアプリを使用してBLE（Bluetooth Low Energy）でワイヤレス制御するIoTシステムを開発。**AI駆動開発手法**を段階的に活用し、初期開発ではGrok 3、Claude 4、Cursorを使用し、Streamlit対応時にはClaudeCodeを活用した開発プロセスを実践。入門的なロボット制御システムを構築。
+タミヤのアームクローラー工作キットをベースに、Arduino Uno R4 WiFiとAndroidアプリを使用してBLE（Bluetooth Low Energy）でワイヤレス制御するIoTシステムを開発。**AI駆動開発手法**を段階的に活用し、Grok 3、Claude 4、Cursor、ClaudeCodeを活用した開発プロセスを実践。入門的なロボット制御システムを構築。
 
 ## 🎯 技術的成果
 
@@ -41,7 +41,6 @@
 - **モバイルアプリ**: Kotlin + Bluetooth LE API
 - **AI支援開発**: Grok 3 + Claude 4 + Cursor + ClaudeCode
 - **統合開発環境**: Arduino IDE, Android Studio
-- **Webアプリ開発**: Streamlit対応（ClaudeCode）
 - **バージョン管理**: Git
 - **AI支援機能**: コード生成・編集・デバッグ・ドキュメント編集
 
@@ -101,8 +100,7 @@ arduino-arm-crawler/
 ## 🚀 開発プロセス・手法
 
 ### AI駆動開発の実践
-- **初期開発**: Grok 3、Claude 4、Cursorを活用
-- **Streamlit対応**: ClaudeCodeによるWebアプリケーション開発
+- **AI支援開発**: Grok 3、Claude 4、Cursor、ClaudeCodeを活用
 - **開発手法**: プロトタイプ→テスト→改良のイテレーション
 - **学習アプローチ**: 実践的な問題解決を通じた技術習得
 
@@ -133,8 +131,8 @@ arduino-arm-crawler/
 
 ### 開発手法・ツール
 - **バージョン管理**: Git を使った開発管理
-- **AI駆動開発**: 段階的なAIツール活用（Grok 3、Claude 4、Cursor → ClaudeCode）
-- **Webアプリ開発**: ClaudeCodeによるStreamlitアプリケーション構築
+- **AI駆動開発**: 段階的なAIツール活用（Grok 3、Claude 4、Cursor、ClaudeCode）
+
 - **デバッグ**: ハードウェア・ソフトウェア両面での問題解決
 
 ## 🎬 デモンストレーション
@@ -154,11 +152,11 @@ arduino-arm-crawler/
 - **無線通信**: IoTデバイス間通信の実践的理解
 
 ### 学習価値
-- **AI駆動開発**: 段階的なAIツール活用（Grok 3、Claude 4、Cursor → ClaudeCodeによるStreamlit対応）
+- **AI駆動開発**: 段階的なAIツール活用（Grok 3、Claude 4、Cursor、ClaudeCode）
 - **プロトタイピング**: アイデアから実機までの完結した開発体験
 - **問題解決**: 技術的課題の特定と解決プロセス
 - **AI支援プログラミング**: プロンプトエンジニアリングとコード品質管理
-- **Webアプリ開発**: ClaudeCodeを活用したStreamlitアプリケーション構築
+
 
 ### 今後の展開可能性
 - **機能拡張**: カメラ追加、センサー連携
@@ -175,6 +173,6 @@ arduino-arm-crawler/
 
 **開発者情報**  
 tmomo086 (X: @mirai_sousiyo39)  
-AI駆動開発: 初期開発（Grok 3 + Claude 4 + Cursor）→ Streamlit対応（ClaudeCode）
+AI駆動開発: Grok 3 + Claude 4 + Cursor + ClaudeCode
 
-*本プロジェクトは、段階的なAI駆動開発の実践として、初期開発ではGrok 3、Claude 4、Cursorを活用し、Streamlit対応時にはClaudeCodeを使用した開発プロセスを実践した教育・学習目的のオープンソースプロジェクトです。*
+*本プロジェクトは、段階的なAI駆動開発の実践として、Grok 3、Claude 4、Cursor、ClaudeCodeを活用した開発プロセスを実践した教育・学習目的のオープンソースプロジェクトです。*

@@ -5,7 +5,7 @@
 ![Language: C++ | Kotlin](https://img.shields.io/badge/Language-C%2B%2B%20%7C%20Kotlin-orange.svg)
 ![AI Development: Grok3 | Claude4 | ClaudeCode](https://img.shields.io/badge/AI%20Development-Grok3%20%7C%20Claude4%20%7C%20ClaudeCode-blue.svg)
 ![Development Method: Vibe Coding](https://img.shields.io/badge/Development%20Method-Vibe%20Coding-red.svg)
-![Web Framework: Streamlit](https://img.shields.io/badge/Web%20Framework-Streamlit-yellow.svg)
+
 ![Status: Portfolio](https://img.shields.io/badge/Status-Portfolio-purple.svg)
 
 タミヤのアームクローラーをArduino Uno R4 WiFiとAndroidアプリでBluetooth Low Energy (BLE)制御するIoTプロジェクト
@@ -37,7 +37,7 @@
 
 タミヤのアームクローラー工作キットをワイヤレス化し、AndroidアプリからBLE通信でリアルタイム制御するシステムです。
 
-**段階的なAI駆動開発**による初作品として、初期開発ではGrok 3、Claude 4、Cursorを使用し、Streamlit対応時にはClaudeCodeを活用した開発プロセスを実践。IoT・ロボット制御の入門プロジェクトとして制作しました。
+**段階的なAI駆動開発**による初作品として、Grok 3、Claude 4、Cursor、ClaudeCodeを活用した開発プロセスを実践。IoT・ロボット制御の入門プロジェクトとして制作しました。
 
 ### 主な機能
 - **リアルタイム制御**: 前進・後退・左右旋回・停止
@@ -59,7 +59,6 @@
 ### 開発ツール
 - **AI支援開発**: Grok 3 + Claude 4 + Cursor + ClaudeCode
 - **統合開発環境**: Arduino IDE, Android Studio
-- **Webアプリ開発**: Streamlit対応（ClaudeCode）
 - **AI支援機能**: コード生成・デバッグ・リファクタリング・ドキュメント編集
 
 ## 📱 システム構成
@@ -139,12 +138,12 @@ arduino-arm-crawler/
 
 このプロジェクトで習得した技術：
 
-- **AI駆動開発**: 段階的なAIツール活用（Grok 3、Claude 4、Cursor → ClaudeCodeによるStreamlit対応）
+- **AI駆動開発**: 段階的なAIツール活用（Grok 3、Claude 4、Cursor、ClaudeCode）
 - **IoT開発**: ハードウェア制御とモバイルアプリの統合
 - **BLE通信**: Arduino-Android間のリアルタイム通信
 - **組み込み制御**: PWMによるモーター制御・エラーハンドリング
 - **モバイル開発**: Kotlin + Bluetooth LE API
-- **Webアプリ開発**: ClaudeCodeを活用したStreamlitアプリケーション構築
+
 - **システム設計**: 安全性を考慮した制御システム
 - **AI支援開発**: プロンプトエンジニアリングとコード品質管理
 
@@ -168,12 +167,11 @@ arduino-arm-crawler/
 
 - **AI支援開発**: Grok 3 + Claude 4 + Cursor + ClaudeCode
 - **統合開発環境**: Arduino IDE, Android Studio
-- **Webアプリ開発**: Streamlit対応（ClaudeCode）
 - **AI支援機能**: コード生成・デバッグ・リファクタリング・ドキュメント編集
 
 ## 👨‍💻 作成者
 
 **tmomo086** ([@mirai_sousiyo39](https://x.com/mirai_sousiyo39))
 
-> 本プロジェクトは、段階的なAI駆動開発の実践として、初期開発ではGrok 3、Claude 4、Cursorを活用し、Streamlit対応時にはClaudeCodeを使用した開発プロセスを実践した作品です。
+> 本プロジェクトは、段階的なAI駆動開発の実践として、Grok 3、Claude 4、Cursor、ClaudeCodeを活用した開発プロセスを実践した作品です。
 
