@@ -175,7 +175,7 @@ arduino-arm-crawler/
 
 | 開発者 | tomomo086 + Claude4 |
 |--------|-------------------|
-| 開発期間 | 2025年7月 |
+| 開発期間 | 2025年4月 |
 | バージョン | 1.0.0 |
 | 開発ツール | Claude4, ClaudeCode, Cursor |
 
