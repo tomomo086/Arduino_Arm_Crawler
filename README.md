@@ -191,4 +191,4 @@ arduino-arm-crawler/
 
 このREADMEもClaude4、ClaudeCode、CursorによるAI支援で作成されています 🤖💻
 
-> 本プロジェクトは、Grok 3によるAI駆動開発の実践として制作した作品です。
+>本プロジェクトは、Grok 3によるAI駆動開発の実践として制作した作品です。
