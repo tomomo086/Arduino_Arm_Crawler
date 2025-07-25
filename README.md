@@ -181,8 +181,8 @@ arduino-arm-crawler/
 
 ## 🔗 関連リンク
 
-- **tomomo086**: [Github](https://github.com/tomomo086)
-- **@mirai_sousiyo39**: [X](https://x.com/mirai_sousiyo39)
+- [tomomo086: Github](https://github.com/tomomo086)
+- [@mirai_sousiyo39: X](https://x.com/mirai_sousiyo39)
 
 ---
 
