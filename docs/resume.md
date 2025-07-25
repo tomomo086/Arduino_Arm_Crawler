@@ -172,7 +172,6 @@ arduino-arm-crawler/
 ---
 
 **開発者情報**  
-tmomo086 (X: @mirai_sousiyo39)  
-AI駆動開発: Grok 3 + Claude 4 + Cursor + ClaudeCode
+tmomo086 (X: @mirai_sousiyo39)
 
-*本プロジェクトは、段階的なAI駆動開発の実践として、Grok 3、Claude 4、Cursor、ClaudeCodeを活用した開発プロセスを実践した教育・学習目的のオープンソースプロジェクトです。*
+*本プロジェクトは、AI駆動開発の実践として、Grok 3、Claude 4、Cursor、ClaudeCodeを段階的に活用した教育・学習目的のオープンソースプロジェクトです。*
