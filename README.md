@@ -169,14 +169,6 @@ arduino-arm-crawler/
 - **統合開発環境**: Arduino IDE, Android Studio
 - **AI支援機能**: コード生成・デバッグ・リファクタリング
 
-## 👨‍💻 作成者
-
-**tmomo086** ([@mirai_sousiyo39](https://x.com/mirai_sousiyo39))
-
-> 本プロジェクトは、Grok 3によるAI駆動開発の実践として制作した作品です。
-
-> 💡 **注記**: このREADMEファイルの編集・修正には、記事執筆用のAIツール（Claude4、ClaudeCode、Cursor）を使用しています。
-
 ---
 
 ## 📋 開発情報
@@ -199,3 +191,4 @@ arduino-arm-crawler/
 
 このREADMEもClaude4、ClaudeCode、CursorによるAI支援で作成されています 🤖💻
 
+> 本プロジェクトは、Grok 3によるAI駆動開発の実践として制作した作品です。
