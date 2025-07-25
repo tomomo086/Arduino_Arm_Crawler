@@ -189,6 +189,7 @@ arduino-arm-crawler/
 **作成者**: [tomomo086(@mirai_sousiyo39) + Claude4]  
 **最終更新**: 2025年7月19日
 
-このREADMEもClaude4、ClaudeCode、CursorによるAI支援で作成されています 🤖💻
+🤖 **AI駆動開発の実践例**
 
->本プロジェクトは、Grok 3によるAI駆動開発の実践として制作した作品です。
+このREADMEもClaude4、ClaudeCode、CursorによるAI支援で作成されています。  
+本プロジェクトは、Grok 3によるAI駆動開発の実践として制作した作品です。
